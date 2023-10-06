@@ -4,7 +4,7 @@ import Link from "next/link";
 //https://dev.classmethod.jp/articles/nextjs-static-cache/
 
 const getSampleData = async () => {
-  const res = await fetch(`http://localhost:3000/api/sample`, {
+  const res = await fetch(`http://127.0.0.1:3000/api/sample`, {
     cache: "force-cache",
   });
   const data = await res.json();

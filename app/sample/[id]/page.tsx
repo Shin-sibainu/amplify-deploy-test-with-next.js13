@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 export async function generateStaticParams() {
-  const res = await fetch(`http://localhost:3000/api/sample`);
+  const res = await fetch(`http://127.0.0.1:3000/api/sample`);
   const sampleData = await res.json();
   return sampleData.data.map((data: any) => ({
     id: data.id.toString(),
