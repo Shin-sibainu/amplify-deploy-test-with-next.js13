@@ -1,10 +1,13 @@
+import { config } from "@/lib/config";
 import Image from "next/image";
 import Link from "next/link";
 
 //https://dev.classmethod.jp/articles/nextjs-static-cache/
 
+const apiUrl = config.apiPrefix + config.apiHost + "/api/sample";
+
 const getSampleData = async () => {
-  const res = await fetch(`http://127.0.0.1:3000/api/sample`, {
+  const res = await fetch(apiUrl, {
     cache: "force-cache",
   });
   const data = await res.json();
