@@ -1,11 +1,11 @@
-import { config } from "@/lib/config";
+import { API_BASE_URL } from "@/lib/config";
 import Link from "next/link";
 import React from "react";
 
-const apiUrl = config.apiPrefix + config.apiHost + "/api/sample";
+const apiURL = API_BASE_URL;
 
 export async function generateStaticParams() {
-  const res = await fetch(apiUrl);
+  const res = await fetch(`${apiURL}/sample`);
   const sampleData = await res.json();
   return sampleData.data.map((data: any) => ({
     id: data.id.toString(),

@@ -1,4 +1,1 @@
-export const config = {
-  apiPrefix: process.env.NEXT_PUBLIC_API_PREFIX ?? "http://",
-  apiHost: process.env.NEXT_PUBLIC_VERCEL_URL ?? "localhost:3000",
-};
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
